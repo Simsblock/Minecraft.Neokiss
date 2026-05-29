@@ -1,25 +1,57 @@
+# NeoKiss
 
-Installation information
-=======
+NeoKiss is a fork of the MIT licensed kiss mod. \
+Specifically a forked of the [1.2.0 Neoforge](https://modrinth.com/mod/kiss-fabric/version/plUmdfHo) Version.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+> [Recaf](https://github.com/Col-E/Recaf/releases/tag/4.0.0-alpha) was our tool of choice for decompiling the jar.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+This fork aims to fix slight issues with the mod, fix some major version breaking bugs and to make it available to the public.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+_**What if we kissed on our Aeronautics Contraption,,??**_
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+## How to use
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Rapidly sneak close to another player and hearts will start appearing. 
+
+Alernatively u can use the `/kiss <player>` command to keep your long distance relationships going, but be ware: Selflove is prohibited \>:3c
+
+## Config
+
+The config is pretty self explanatory :3
+
+```
+#Message shown to the kissed player (use %s for player name)
+kissMessage = "%s kissed you!"
+
+#Message shown to the kissing player (use %s for player name)
+kissPromptMessage = "You kissed %s!"
+
+#Error message when trying to kiss yourself
+selfKissErrorMessage = "You can't kiss yourself!"
+
+#Error message when command is on cooldown (use %d for seconds)
+cooldownErrorMessage = "Wait %d seconds before kissing again!"
+
+#Cooldown between kisses in seconds
+# Default: 10
+# Range: 1 ~ 3600
+commandCooldown = 10
+
+#Maximum number of heart particles when sneaking
+# Default: 6
+# Range: 1 ~ 20
+maxSneakParticles = 6
+
+#Radius for detecting nearby players when sneaking
+# Default: 16.0
+# Range: 1.0 ~ 128.0
+sneakTriggerRadius = 1.0
+
+#Maximum view angle for detecting players (in degrees)
+# Default: 90.0
+# Range: 1.0 ~ 360.0
+maxViewAngleDegree = 90.0
+
+#Enable the /kiss command
+enableKissCommand = true
+````
