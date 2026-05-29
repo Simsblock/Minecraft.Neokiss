@@ -12,7 +12,7 @@ loaderVersion="[1,)" #mandatory
 
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license="All Rights Reserved"
+license="GPL 3.0"
 
 # A URL to refer people to when problems occur with this mod
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
@@ -21,13 +21,13 @@ license="All Rights Reserved"
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="kissmod" #mandatory
+modId="neokiss" #mandatory
 
 # The version number of the mod
-version="1.2.0" #mandatory
+version="1.0.0" #mandatory
 
 # A display name for the mod
-displayName="KissMod" #mandatory
+displayName="NeoKiss" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
@@ -42,10 +42,10 @@ displayName="KissMod" #mandatory
 #credits="" #optional
 
 # A text field displayed in the mod UI
-authors="Hyouka233" #optional
+authors="Hyouka233, Simsblock, Satunary" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''A lightweight mod that spawns heart particles above the player who rapidly crouches near others ? a simple gesture of friendliness.'''
+description='''A mod which spawns hearts above players when rapidly crouching near others <3'''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]
@@ -69,7 +69,7 @@ description='''A lightweight mod that spawns heart particles above the player wh
     # Optional field describing why the dependency is required or why it is incompatible
     # reason="..."
     # The version range of the dependency
-    versionRange="[21.4.141,)" #mandatory
+    versionRange="[21.1.0,)" #mandatory
     # An ordering relationship for the dependency.
     # BEFORE - This mod is loaded BEFORE the dependency
     # AFTER - This mod is loaded AFTER the dependency
