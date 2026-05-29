@@ -29,7 +29,7 @@ public class KissUtils {
         }
         UUID self = player.getUUID();
         Vec3 pos = player.position();
-        AABB area = new AABB(pos.add(-radius, -6.0, -radius), pos.add(radius, 6.0, radius));
+        AABB area = new AABB(pos.add(-radius, -radius, -radius), pos.add(radius, radius, radius));
         for (ServerPlayer other : level.players()) {
             if (other.getUUID().equals(self) || !area.contains(other.position()) || !KissUtils.isPlayerInViewAndCanSee(player, other, maxViewAngleDegree)) continue;
             return true;

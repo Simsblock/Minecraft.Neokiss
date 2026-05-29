@@ -59,22 +59,25 @@ public class NeoKiss {
         UUID uuid = player.getUUID();
         SneakData data = this.playerSneakData.computeIfAbsent(uuid, u -> new SneakData());
         boolean isSneaking = player.isCrouching();
+        int delta = (int)(level.getGameTime() - data.lastTime);
         if (isSneaking && !data.wasSneaking) {
-            int delta = (int)(level.getGameTime() - data.lastTime);
+
             data.count = delta <= 40 ? data.count + 1 : 1;
             data.lastTime = level.getGameTime();
             if (data.count >= 3) {
-                if (KissUtils.hasVisibleNearbyPlayers(player, level, Config.getSneakTriggerRadius(), Config.getMaxViewAngleDegree())) {
+                if (KissUtils.hasVisibleNearbyPlayers((ServerPlayer)player, (ServerLevel)level, (double)Config.getSneakTriggerRadius(), (double)Config.getMaxViewAngleDegree())) {
                     data.particleLevel = Math.min(Config.getMaxSneakParticles(), data.particleLevel + 1);
-                    KissUtils.spawnHeartParticles(level, player, data.particleLevel + 1, 0.3, 0.1);
+                    KissUtils.spawnHeartParticles((ServerLevel)level, (ServerPlayer)player, (int)(data.particleLevel + 1), (double)0.3, (double)0.1);
                 }
+                if(data.count>500) {data.count=3;}
                 data.count = 0;
-            } else if (KissUtils.hasVisibleNearbyPlayers(player, level, 6.0, Config.getMaxViewAngleDegree())) {
-                KissUtils.spawnHeartParticles(level, player, 1, 0.1, 0.05);
             }
         }
         if (!isSneaking && data.wasSneaking) {
             data.particleLevel = Math.max(1, data.particleLevel - 2);
+            if(delta >= 40){
+                data.count=0;
+            }
         }
         data.wasSneaking = isSneaking;
     }
