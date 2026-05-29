@@ -6,6 +6,6 @@ private static class NeoKiss.SneakData {
     int particleLevel = 1;
     boolean wasSneaking = false;
 
-    private NeoKiss.SneakData() {
+    private SneakData() {
     }
 }
