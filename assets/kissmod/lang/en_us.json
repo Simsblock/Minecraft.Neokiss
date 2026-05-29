@@ -1,0 +1,9 @@
+{
+  "itemGroup.kissmod": "Example Mod Tab",
+  "block.kissmod.example_block": "Example Block",
+  "item.kissmod.example_item": "Example Item",
+
+  "kissmod.configuration.title": "KissMod Configs",
+  "kissmod.configuration.section.kissmod.common.toml": "KissMod Configs",
+  "kissmod.configuration.section.kissmod.common.toml.title": "KissMod Configs"
+}
